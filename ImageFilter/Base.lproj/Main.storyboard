@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageFilter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Photo Filter to Sepia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZU-1T-fEt">
+                                <rect key="frame" x="20" y="54" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PSM-nC-Ykf">
+                                <rect key="frame" x="0.0" y="101" width="414" height="259"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PSM-nC-Ykf" secondAttribute="height" multiplier="8:5" id="Q5g-2A-7K2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8C-7V-9sF">
+                                <rect key="frame" x="274" y="380" width="120" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Import Image">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="importImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVj-KC-ros"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voD-LQ-6kH">
+                                <rect key="frame" x="20" y="380" width="110" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takePictureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3p-XK-fTL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0ZU-1T-fEt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2hw-Ck-A0E"/>
+                            <constraint firstItem="voD-LQ-6kH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Wu-A1-niK"/>
+                            <constraint firstItem="PSM-nC-Ykf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="APm-Fz-EGY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ZU-1T-fEt" secondAttribute="trailing" constant="20" id="Lwu-A8-j8j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k8C-7V-9sF" secondAttribute="trailing" constant="20" id="ONp-Ws-pBa"/>
+                            <constraint firstItem="0ZU-1T-fEt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cQR-sl-q1O"/>
+                            <constraint firstItem="k8C-7V-9sF" firstAttribute="top" secondItem="PSM-nC-Ykf" secondAttribute="bottom" constant="20" id="dh9-Eh-pof"/>
+                            <constraint firstItem="PSM-nC-Ykf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f22-Bw-VCp"/>
+                            <constraint firstItem="PSM-nC-Ykf" firstAttribute="top" secondItem="0ZU-1T-fEt" secondAttribute="bottom" constant="20" id="l4C-ZX-cNm"/>
+                            <constraint firstItem="voD-LQ-6kH" firstAttribute="top" secondItem="PSM-nC-Ykf" secondAttribute="bottom" constant="20" id="z30-i4-YOH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="importImage" destination="k8C-7V-9sF" id="q96-Mj-OIa"/>
+                        <outlet property="photo" destination="PSM-nC-Ykf" id="pj1-oM-U5X"/>
+                        <outlet property="takePicture" destination="voD-LQ-6kH" id="h0a-A7-vvi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

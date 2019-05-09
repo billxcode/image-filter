@@ -15,6 +15,7 @@
 		B7567496228333DC0068081A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7567494228333DC0068081A /* LaunchScreen.storyboard */; };
 		B75674A1228333DC0068081A /* ImageFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75674A0228333DC0068081A /* ImageFilterTests.swift */; };
 		B75674AC228333DC0068081A /* ImageFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75674AB228333DC0068081A /* ImageFilterUITests.swift */; };
+		B75674BA2283E87C0068081A /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = B75674B92283E87C0068081A /* image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B75674A7228333DC0068081A /* ImageFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75674AB228333DC0068081A /* ImageFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterUITests.swift; sourceTree = "<group>"; };
 		B75674AD228333DC0068081A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B75674B92283E87C0068081A /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B7567494228333DC0068081A /* LaunchScreen.storyboard */,
 				B7567497228333DC0068081A /* Info.plist */,
 				B756748F228333DB0068081A /* ImageFilter.xcdatamodeld */,
+				B75674B92283E87C0068081A /* image.png */,
 			);
 			path = ImageFilter;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				B7567496228333DC0068081A /* LaunchScreen.storyboard in Resources */,
 				B7567493228333DC0068081A /* Assets.xcassets in Resources */,
 				B756748E228333DB0068081A /* Main.storyboard in Resources */,
+				B75674BA2283E87C0068081A /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
